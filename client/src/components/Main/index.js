@@ -1,8 +1,11 @@
 import React from "react";
 import Card from "../Card/Card";
 
+
 const Main = (props) => {
-    console.log(props);
+ 
+
+  
     return<>
         <div className='Header'>
         <div className={props.c1} id='here'>
@@ -11,9 +14,7 @@ const Main = (props) => {
         </div>
         <div className='parent'>
           <div className='cards'>
-            <Card />
-            <Card />
-            <Card />
+            
           </div>
           <button className={props.c3}>View More</button>
         </div>

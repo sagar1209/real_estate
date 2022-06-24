@@ -12,8 +12,7 @@ const Main = (props) => {
         <div className='parent'>
           <div className='cards'>
             <Card />
-            <Card />
-            <Card />
+           
           </div>
           <button className={props.c3}>View More</button>
         </div>
