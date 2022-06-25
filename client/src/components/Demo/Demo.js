@@ -1,113 +1,59 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-// import "./Login.css"
+import React from 'react';
+// import './card.css';
+import Details from  '../Details/Details.jsx';
+import { useState,useEffect } from 'react';
 
-const Login = () => {
 
-	const navigate = useNavigate();
 
-	const [user, setUser] = useState({
-		email: '',
-		password: ''
-	});
+const Demo = () => {
+    
+const [modalShow , setModalShow] = useState(false);
+const [houses,setHouses] = useState([
+    {
+        title : "",
+        address: "",
+        url :"",
+    },
+    
+])
 
-	// Handle Input
-	const handleChange = (event) => {
-		let name = event.target.name
-		let value = event.target.value
+const [house,setHouse] = useState({
+    title : "",
+    address: "",
+})
 
-		setUser({ ...user, [name]: value })
-	}
 
-	// Handle Login
-	const handleSubmit = async (event) => {
-		event.preventDefault();
-		const { email, password } = user;
-		try {
-			const res = await fetch('/login', {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json"
-				},
-				body: JSON.stringify({
-					email, password
-				})
-			});
+useEffect(() =>{
+    fetch("http://localhost:3005/")
+    .then((res) =>res.json())
+    .then((jsonRes) => setHouses(jsonRes));
 
-			if (res.status === 400 || !res) {
-				window.alert("Invalid Credentials")
-			} else {
-				window.alert("Login Successfull");
-				window.location.reload();
-				navigate('/');
-			}
+},[]);
 
-		} catch (error) {
-			console.log(error);
-		}
-	}
+const handleClick = (e) => {
+   setModalShow(true);
+    const {name,alt,src} = e.target;
+    setHouse({
+        title : name,
+        address: alt,
+        url : src,
 
-	return (
-		<div className="Outer">
-			<div className="Inner">
-				<h1 className="text-center cl">Login</h1>
-			</div>
+    });
 
-			<div className="container contact_div">
-				<div className="row">
-					<div className="col-md-6 col-10 mx-auto login-style">
-						<form onSubmit={handleSubmit} className="form_container">
-							<div class="mb-3">
+}
+    return<>
+            <Details
+                 
+                 show = {modalShow}
+                 onHide = {() => setModalShow(false)}
+                 title = {house.title}
+                 address = {house.address}
+                 url ={house.url} 
+               />
+            
 
-								<label for="exampleInputEmail1" class="form-label">
-									Email address
-								</label>
-
-								<input
-									type="email"
-									className="input"
-									id="exampleInputEmail1"
-									name="email"
-									required
-									value={user.email}
-									onChange={handleChange}
-								/>
-
-							</div>
-
-							<div class="mb-3">
-
-								<label for="exampleInputPassword1" class="form-label">Password</label>
-
-								<input
-									type="password"
-									className="input"
-									id="exampleInputPassword1"
-									name="password"
-									required
-									value={user.password}
-									onChange={handleChange}
-								/>
-
-							</div>
-
-							<button type="submit" class="btn btn-dark">
-								Login
-							</button>
-
-						</form>
-
-						<div className="">
-							<h5 className="btn-pad">Don't have account ?</h5>
-							<NavLink className="btn btn-dark mt-3" aria-current="page" to="/register">Register</NavLink>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	)
+    </>
+   
 }
 
-export default Login;
+export default Demo;

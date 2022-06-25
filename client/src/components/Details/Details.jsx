@@ -15,11 +15,11 @@ const carouselSettings = {
     showArrows: false,
 };
 
-function details() {
+function details(props) {
     return (
         <Main>
             <div>
-                <h1 className="heading">22043 Columbus Avenue</h1>
+                <h1 className="heading">{props.title}</h1>
                 <p className="rent">RENT</p>
                 <p className="price">$1,200</p>
 
