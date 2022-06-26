@@ -38,14 +38,6 @@ useEffect(() =>{
 const handleClick = async(e) => {
     setModalShow(true);
     const {name,alt,src} = e.target;
-<<<<<<< HEAD
-    setHouse({
-        title : name,
-        address: alt,
-        url : src,
-    });
-    navigate('/demo');
-=======
 
 
     
@@ -64,7 +56,6 @@ const handleClick = async(e) => {
     
     
     navigate('/demo',{state:{id:name,name:name}});
->>>>>>> a2d89417d8a316c80debcedbc28effe311e893b6
 
 }
 
