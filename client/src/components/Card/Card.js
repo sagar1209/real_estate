@@ -64,7 +64,7 @@ const handleClick = async(e) => {
 
     return<>
 
-    <div>
+    <>
 
          {houses.map( house => {
             return<>
@@ -73,6 +73,7 @@ const handleClick = async(e) => {
             <div className="img">
                     
                  <img  key ={house.title} src={house.url} alt={house.address} name={house.title}   />
+            </div>
                  <div className="container">
                 <p className="add1">{house.address} </p>
                 <p className="add2">{house.title}</p>
@@ -81,22 +82,22 @@ const handleClick = async(e) => {
                 <hr />
                 <div className="data" >
                     <div className="d">
-                        {/* <img src={require('../../Icon/icons8-empty-bed-50.png')} alt="" /> */}
+                        <img src={require('../../Icon/icons8-empty-bed-50.png')} alt="" />
                         <p className="t">Bed</p>
                         <p className="digit">2</p>
                     </div>
                     <div className="d">
-                        {/* <img src={require('../../Icon/icons8-bath-48.png')} alt="" /> */}
+                        <img src={require('../../Icon/icons8-bath-48.png')} alt="" />
                         <p className="t">Bath</p>
                         <p className="digit">2</p>
                     </div>
                     <div className="d">
-                        {/* <img src={require('../../Icon/icons8-city-buildings-48.png')} alt="" /> */}
+                        <img src={require('../../Icon/icons8-city-buildings-48.png')} alt="" />
                         <p className="t">Levels</p>
                         <p className="digit">2</p>
                     </div>
                     <div className="d">
-                        {/* <img src={require('../../Icon/icons8-surface-64.png')} alt="" /> */}
+                        <img src={require('../../Icon/icons8-surface-64.png')} alt="" />
                         <p className="t">Sqft</p>
                         <p className="digit">2</p>
                     </div>
@@ -106,13 +107,13 @@ const handleClick = async(e) => {
                
             </div>  
             
-        </div>
+        {/* </div> */}
         </>
          })}
 
      
     
-    </div>
+    </>
    
 
              

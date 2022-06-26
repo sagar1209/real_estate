@@ -1,5 +1,5 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { IconDiv, Main } from "./styled";
+import { IconDiv, Main } from "./styled (1)";
 import { Carousel } from "react-responsive-carousel";
 
 const carouselSettings = {
@@ -19,7 +19,8 @@ function details(props) {
    
     return (
         <Main>
-            <div>
+            <div className="out_box">
+                <div>
                 <h1 className="heading">{props.title}</h1>
                 <p className="rent">RENT</p>
                 <p className="price">$1,200</p>
@@ -44,8 +45,8 @@ function details(props) {
                         />
                     </div>
                 </Carousel>
-            </div>
-            <div className="desc">
+                </div>
+                <div className="desc">
                 <h2 className="sub-title">Property Description</h2>
                 <p className="para">
                     This item is connected to a text field in your database.
@@ -55,8 +56,8 @@ function details(props) {
                     update your items, add new fields, create dynamic pages and
                     more.
                 </p>
-            </div>
-            <div className="icons-wrapper">
+                </div>
+                <div className="icons-wrapper">
                 <IconDiv>
                     <svg
                         preserveAspectRatio="xMidYMid meet"
@@ -245,11 +246,12 @@ function details(props) {
                     <p>Main Location</p>
                     <strong>San Francisco, CA, USA</strong>
                 </IconDiv>
-            </div>
-            <div>
+                </div>
+                <div>
                 <h2 className="sub-title">Contact Agent</h2>
                 <p className="contact-details">Email: info@mysite.com</p>
                 <p className="contact-details">Phone: 123-456-7890</p>
+                </div>
             </div>
         </Main>
     );

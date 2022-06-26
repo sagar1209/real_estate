@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
 const Main = styled.main`
-    width: 50%;
-    margin: 1em auto;
-    padding: 0 1em;
+    width: 60%;
+    margin: 0em auto;
+    padding: 0 0em;
 
     position: relative;
 
+    .out_box{
+        transform: translateY(3%);
+        padding: 20px;
+        ${'' /* margin: 10px; */}
+    }
+
     div {
-        margin: 1em 0;
+        margin: 0em 0;
     }
 
     .heading {
@@ -58,7 +64,6 @@ const Main = styled.main`
         font-size: 16px;
 
         color: rgba(43, 43, 43);
-
         font-family: "Roboto", sans-serif;
     }
 
