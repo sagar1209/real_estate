@@ -20,6 +20,7 @@ const [houses,setHouses] = useState([
 const [house,setHouse] = useState({
     title : "",
     address: "",
+	url: "",
 })
 
 
@@ -37,7 +38,6 @@ const handleClick = (e) => {
         title : name,
         address: alt,
         url : src,
-
     });
 
 }

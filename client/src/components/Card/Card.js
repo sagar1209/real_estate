@@ -39,7 +39,6 @@ const handleClick = (e) => {
         title : name,
         address: alt,
         url : src,
-        
     });
     navigate('/demo');
 
