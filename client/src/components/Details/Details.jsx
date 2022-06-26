@@ -16,6 +16,7 @@ const carouselSettings = {
 };
 
 function details(props) {
+   
     return (
         <Main>
             <div>

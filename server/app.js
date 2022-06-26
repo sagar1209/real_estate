@@ -4,6 +4,7 @@ const express = require('express');
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
+const cors = require("cors");
 
 const app = express();
 
@@ -15,13 +16,16 @@ const port = process.env.PORT;
 // Require Model
 const Users = require('./models/userSchema');
 const Message = require('./models/msgSchema');
+const Houses = require('./models/houseSchema');
 const authenticate = require('./middleware/authentication');
+
 
 
 // These Method is Used to Get Data and Cookies from FrontEnd
 app.use(express.json());
-app.use(express.urlencoded({extended : false}));
+app.use(express.urlencoded({extended : true}));
 app.use(cookieParser());
+app.use(cors());
 
 app.get('/', (req, res)=>{
     res.send("Hello World");
@@ -107,6 +111,14 @@ app.post('/login', async (req, res)=>{
     }
 })
 
+app.get("/demo",(req,res)=>{
+    Houses.find({})
+    .then((items)=>res.json(items))
+    .catch((err)=>console.log(err));
+
+});
+
+
 // Logout Page
 app.get('/logout', (req, res)=>{
     res.clearCookie("jwt", {path : '/'})
@@ -122,3 +134,10 @@ app.get('/auth', authenticate, (req, res)=>{
 app.listen(port, ()=>{
     console.log("Server is Listening")
 })
+
+
+// app.listen(3005,function() {
+//     console.log("running on port 3005");
+    
+//   })
+

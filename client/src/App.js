@@ -46,6 +46,12 @@ function App() {
     isLoggedIn();
   }, []);
 
+
+
+  
+
+
+
   return (
     
     <>
@@ -58,7 +64,7 @@ function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register/>}/>
         <Route exact path="/logout" element={<Logout/>}/>
-        <Route exact path="/details" element={<Details/>}/>
+        <Route exact path="/Details" element={<Details/>}/>
         <Route path="/home" element={<Navigate replace to="/" />} />
       </Routes>
     </>
