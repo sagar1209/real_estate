@@ -21,7 +21,7 @@ const [houses,setHouses] = useState([
 ])
 
 const [House,setHouse] = useState({
-    title : "sagar",
+    title : "",
     address: "",
 })
 
