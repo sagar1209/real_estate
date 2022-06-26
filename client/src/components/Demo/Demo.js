@@ -1,22 +1,12 @@
 import React from 'react';
 // import './card.css';
 import Details from  '../Details/Details.jsx';
-import { useState,useEffect } from 'react';
+import {useLocation} from 'react-router-dom';
 
 
 
-const Demo = () => {
-    
-const [modalShow , setModalShow] = useState(false);
-const [houses,setHouses] = useState([
-    {
-        title : "",
-        address: "",
-        url :"",
-    },
-    
-])
 
+<<<<<<< HEAD
 const [house,setHouse] = useState({
     title : "",
     address: "",
@@ -41,14 +31,18 @@ const handleClick = (e) => {
     });
 
 }
+=======
+
+const Demo = (ankit) => {
+    const location = useLocation();
+>>>>>>> a2d89417d8a316c80debcedbc28effe311e893b6
     return<>
             <Details
                  
-                 show = {modalShow}
-                 onHide = {() => setModalShow(false)}
-                 title = {house.title}
-                 address = {house.address}
-                 url ={house.url} 
+                 
+                 title = {location.state.name}
+                //  address = {ankit.address}
+                //  url ={ankit.url} 
                />
             
 
