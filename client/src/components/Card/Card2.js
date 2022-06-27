@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const Card = () => {
+const Card2 = () => {
     const navigate = useNavigate();
     
 const [modalShow , setModalShow] = useState(false);
@@ -27,7 +27,7 @@ const [House,setHouse] = useState({
 
 
 useEffect(() =>{
-    fetch("http://localhost:3001/buy")
+    fetch("http://localhost:3001/rent")
     .then((res) =>res.json())
     .then((jsonRes) => setHouses(jsonRes));
 
@@ -57,10 +57,6 @@ const handleClick = async(e) => {
 
 
 }
-
-
-
-
 
     return<>
 
@@ -130,4 +126,4 @@ const handleClick = async(e) => {
    
 }
 
-export default Card;
+export default Card2;

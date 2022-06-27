@@ -17,6 +17,7 @@ const port = process.env.PORT;
 const Users = require('./models/userSchema');
 const Message = require('./models/msgSchema');
 const Houses = require('./models/houseSchema');
+const Rents = require('./models/rentSchema');
 const authenticate = require('./middleware/authentication');
 
 
@@ -111,13 +112,18 @@ app.post('/login', async (req, res)=>{
     }
 })
 
-app.get("/demo",(req,res)=>{
+app.get("/buy",(req,res)=>{
     Houses.find({})
     .then((items)=>res.json(items))
     .catch((err)=>console.log(err));
 
 });
+app.get("/rent",(req,res)=>{
+    Rents.find({})
+    .then((items)=>res.json(items))
+    .catch((err)=>console.log(err));
 
+});
 
 // Logout Page
 app.get('/logout', (req, res)=>{

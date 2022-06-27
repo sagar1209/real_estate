@@ -21,26 +21,26 @@ function details(props) {
         <Main>
             <div className="out_box">
                 <div>
-                <h1 className="heading">{props.title}</h1>
-                <p className="rent">RENT</p>
-                <p className="price">$1,200</p>
+                <h1 className="heading">{props.title1}</h1>
+                <p className="rent">{props.type}</p>
+                <p className="price">{props.price}</p>
 
                 <Carousel {...carouselSettings} style={{ userSelect: "none" }}>
                     <div>
                         <img
-                            src="https://static.wixstatic.com/media/84770f_c73843e2be40458a8857a17eb5de3d84~mv2_d_4896_3264_s_4_2.jpg/v1/fill/w_938,h_733,q_90/84770f_c73843e2be40458a8857a17eb5de3d84~mv2_d_4896_3264_s_4_2.webp"
+                            src={props.url1}
                             alt="house1"
                         />
                     </div>
                     <div>
                         <img
-                            src="https://static.wixstatic.com/media/84770f_ca6a1aafafa04284a052e09b53a0fce9~mv2_d_3456_2304_s_2.jpeg/v1/fill/w_938,h_733,q_90/84770f_ca6a1aafafa04284a052e09b53a0fce9~mv2_d_3456_2304_s_2.jpeg"
+                            src={props.url2}
                             alt="house2"
                         />
                     </div>
                     <div>
                         <img
-                            src="https://static.wixstatic.com/media/84770f_461a280a171041da95705f2f064c9afc~mv2_d_6272_4181_s_4_2.jpeg/v1/fill/w_938,h_733,q_90/84770f_461a280a171041da95705f2f064c9afc~mv2_d_6272_4181_s_4_2.jpeg"
+                            src={props.url3}
                             alt="house3"
                         />
                     </div>
@@ -49,12 +49,7 @@ function details(props) {
                 <div className="desc">
                 <h2 className="sub-title">Property Description</h2>
                 <p className="para">
-                    This item is connected to a text field in your database.
-                    Double click the dataset icon to add your own content. Want
-                    to view and manage all your collections? Click the Data icon
-                    on the add panel to your left. In the Data Manager you can
-                    update your items, add new fields, create dynamic pages and
-                    more.
+                   {props.description}
                 </p>
                 </div>
                 <div className="icons-wrapper">
@@ -89,7 +84,7 @@ function details(props) {
                         </g>
                     </svg>
                     <p>Bedrooms</p>
-                    <strong>4</strong>
+                    <strong>{props.bed}</strong>
                 </IconDiv>
                 <IconDiv>
                     <svg
@@ -112,7 +107,7 @@ function details(props) {
                         </g>
                     </svg>
                     <p>Bathrooms</p>
-                    <strong>2</strong>
+                    <strong>{props.bath}</strong>
                 </IconDiv>
                 <IconDiv>
                     <svg
@@ -140,7 +135,7 @@ function details(props) {
                         </g>
                     </svg>
                     <p>Sqft</p>
-                    <strong>1234</strong>
+                    <strong>{props.sqft}</strong>
                 </IconDiv>
                 <IconDiv>
                     <svg
@@ -193,7 +188,7 @@ function details(props) {
                         </g>
                     </svg>
                     <p>Levels</p>
-                    <strong>3</strong>
+                    <strong>{props.levels}</strong>
                 </IconDiv>
                 <IconDiv>
                     <svg
@@ -216,7 +211,7 @@ function details(props) {
                         </g>
                     </svg>
                     <p>Built Year</p>
-                    <strong>2023</strong>
+                    <strong>{props.built_year}</strong>
                 </IconDiv>
                 <IconDiv>
                     <svg
@@ -244,13 +239,13 @@ function details(props) {
                         </g>
                     </svg>
                     <p>Main Location</p>
-                    <strong>San Francisco, CA, USA</strong>
+                    <strong>{props.main_location}</strong>
                 </IconDiv>
                 </div>
                 <div>
                 <h2 className="sub-title">Contact Agent</h2>
-                <p className="contact-details">Email: info@mysite.com</p>
-                <p className="contact-details">Phone: 123-456-7890</p>
+                <p className="contact-details"> Email :  {props.email}</p>
+                <p className="contact-details"> Phone :  {props.phone}</p>
                 </div>
             </div>
         </Main>

@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../Card/Card";
+import Card2 from "../Card/Card2";
 
 const Main = (props) => {
     console.log(props);
@@ -7,11 +7,11 @@ const Main = (props) => {
         <div className='Header'>
         <div className={props.c1} id='here'>
           NEW PROPERTIES
-          <span className={props.c2}>FOR SELL</span>
+          <span className={props.c2}>FOR RENT</span>
         </div>
         <div className='parent'>
           <div className='cards'>
-            <Card />
+            <Card2/>
            
           </div>
           <button className={props.c3}>View More</button>

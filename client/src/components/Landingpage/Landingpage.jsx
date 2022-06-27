@@ -2,6 +2,7 @@ import React from 'react';
 // import Navbar from '../Navbar/Navbar';
 // import Reviews from "../Reviews/Reviews";
 import Main from '../Main/Main';
+import Main2 from '../Main/Main2';
 import FeedBack from '../Feedback/FeedBack';
 import "../../App.css";
 import Footer from '../Footer/Footer_page';
@@ -19,14 +20,14 @@ const LandPage = () => {
 
             <div className='back_shape_right'></div>
             <Main
-                line1="FOR SELL"
+                
                 c1="l1"
                 c2="l1_"
                 c3="v1"
             />
             <div className='back_shape_left'></div>
-            <Main
-                line1="FOR RENT"
+            <Main2
+                
                 c1="l2"
                 c2="l2_"
                 c3="v2"
