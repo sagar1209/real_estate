@@ -40,7 +40,7 @@ const Login = () => {
 			} else {
 				window.alert("Login Successfull");
 				window.location.reload();
-				navigate('/');
+				// navigate('/');
 			}
 
 		} catch (error) {

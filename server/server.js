@@ -14,19 +14,6 @@ app.use(cors());
 app.use(express.urlencoded({extended :true}));
 
 
-// const houses = [
-//     {
-//         title : "house 3",
-//         address : "nadiad",
-//         url : "https://arizent.brightspotcdn.com/93/c9/9e3597854598b73dd963eef59f35/pexels-binyamin-mellish-186077-2.jpg",
-//     },
-//     {
-//         title : "house 4",
-//         address : "junagath",
-//         url : "https://thumbs.dreamstime.com/b/luxury-big-modern-house-electric-car-luxury-modern-house-electric-car-141295838.jpg",
-//     }
-// ]
-
 //data base
 mongoose.connect(MONGO_URI, {
     useNewUrlParser : true,

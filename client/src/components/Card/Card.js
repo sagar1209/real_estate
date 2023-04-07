@@ -20,7 +20,7 @@ const [houses,setHouses] = useState([
     
 ])
 
-const [House,setHouse] = useState({
+const [house,setHouse] = useState({
     title : "",
     address: "",
 })
@@ -59,14 +59,11 @@ const handleClick = async(e) => {
 }
 
 
-
-
-
     return<>
 
     <>
 
-         {houses.map( house => {
+       
             
             return<>
         <div className="main"   >
@@ -115,7 +112,7 @@ const handleClick = async(e) => {
             
         {/* </div> */}
         </>
-         })}
+
 
      
     

@@ -12,6 +12,7 @@ const HouseSchema = new mongoose.Schema({
         required : true,
     },
     url : {
+        
         type : String,
         required : true
     }
